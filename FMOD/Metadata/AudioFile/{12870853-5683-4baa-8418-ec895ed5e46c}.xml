@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{12870853-5683-4baa-8418-ec895ed5e46c}">
+		<property name="assetPath">
+			<value>audioblocks-manufacturing-bliss_H8HfPRvov_NWM.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>152.42448979591836</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{cb154451-b3f1-4402-8daf-4bcd48be4a6b}</destination>
+		</relationship>
+	</object>
+</objects>
