@@ -63,12 +63,15 @@ namespace StarterAssets
 		[Header("Custom Player Logic")]
 		[Tooltip("The animator for our character")]
 		public Animator CharacterAnimator;
+
+		public float AnimationTriggerTime = 5.0f;
 		
 		[Tooltip("The particlesystem for our jump animation")]
 		public ParticleSystem JumpParticleSystem;
 		
 		private string _animatorJumpKey = "JumpTrigger";
 		private bool _didJump = false;
+		private float _idleTimer = 0.0f;
 		
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -193,7 +196,23 @@ namespace StarterAssets
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			if (_input.move == Vector2.zero)
+			{
+				_idleTimer += Time.deltaTime;
+				targetSpeed = 0.0f;
+				
+				if (_idleTimer >= AnimationTriggerTime)
+				{
+					_idleTimer = 0.0f;
+					CharacterAnimator.Play("Idle");
+				}
+				
+			}
+			else
+			{
+				_idleTimer = 0.0f;
+			}
+			
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
