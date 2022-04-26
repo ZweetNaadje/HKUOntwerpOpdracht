@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Teleport_Mechanic
+namespace Teleport_Logic
 {
     public class TeleportPad : MonoBehaviour
     {
