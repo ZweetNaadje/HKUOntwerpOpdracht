@@ -351,6 +351,8 @@ GameObject:
   - component: {fileID: 1286483802}
   - component: {fileID: 1286483801}
   - component: {fileID: 1286483800}
+  - component: {fileID: 1286483804}
+  - component: {fileID: 1286483805}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -436,6 +438,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286483804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286483799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af89bc4d138abb47906048b9d4f216e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 0
+  key1: 0
+  key2: 0
+  hasSpring: 0
+--- !u!54 &1286483805
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286483799}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1404412215
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +759,7 @@ GameObject:
   - component: {fileID: 1803935004}
   - component: {fileID: 1803935003}
   - component: {fileID: 1803935005}
+  - component: {fileID: 1803935006}
   m_Layer: 0
   m_Name: DoorFrame
   m_TagString: Untagged
@@ -746,6 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 489963045}
   TriggerName: DoorOpen
+  CanActivate: 0
 --- !u!4 &1803935004
 Transform:
   m_ObjectHideFlags: 0
@@ -777,6 +813,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.37, y: 1.47, z: 3.6}
   m_Center: {x: 0, y: -0.75, z: -0.69}
+--- !u!114 &1803935006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803935002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c564ec10bfb695745acfb2357cf090e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trigger: {fileID: 1803935003}
+  _inventory: {fileID: 1286483804}
 --- !u!1 &2005856235
 GameObject:
   m_ObjectHideFlags: 0
