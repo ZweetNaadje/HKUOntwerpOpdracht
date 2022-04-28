@@ -9,6 +9,16 @@ namespace Trigger_Logic
         
         public string TriggerName;
         public bool CanActivate;
+
+        public void ActivateTrigger()
+        {
+            _animator.SetBool(TriggerName, true);
+        }
+
+        public void DeactivateTrigger()
+        {
+            _animator.SetBool(TriggerName, false);
+        }
         
         private void OnTriggerEnter(Collider other)
         {
@@ -19,7 +29,7 @@ namespace Trigger_Logic
 
             if (CanActivate)
             {
-                _animator.SetBool(TriggerName, true);
+                ActivateTrigger();
             }
         }
 
@@ -30,7 +40,7 @@ namespace Trigger_Logic
                 return;
             }
             
-            _animator.SetBool(TriggerName, false);
+            DeactivateTrigger();
         }
     }
 }
