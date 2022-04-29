@@ -23,11 +23,6 @@ namespace Player_Handler
             _respawnBehaviour.SetRespawnPoint(respawnPoint);
         }
 
-        private void OnTriggerExit(Collider other)
-        {
-            
-        }
-
         private void Update()
         {
             if (transform.position.y < -20)
