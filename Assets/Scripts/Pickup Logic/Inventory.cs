@@ -8,4 +8,5 @@ public class Inventory : MonoBehaviour
     public bool key1;
     public bool key2;
     public bool hasSpring;
+    public bool hasLamp;
 }

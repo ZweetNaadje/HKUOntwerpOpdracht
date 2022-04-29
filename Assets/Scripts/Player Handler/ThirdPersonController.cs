@@ -1,3 +1,4 @@
+using Cinemachine;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -59,6 +60,11 @@ namespace StarterAssets
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 		
+		[Tooltip("This is the maincamera, which is shown when playing the game")]
+		public CinemachineVirtualCamera VirtualMainCamera;
+		[Tooltip("This is the aimcamera, which is shown when you are aiming")]
+		public CinemachineVirtualCamera VirtualAimCamera;
+		
 		// Custom player logic
 		[Header("Custom Player Logic")]
 		[Tooltip("The animator for our character")]
@@ -100,7 +106,7 @@ namespace StarterAssets
 		private Animator _animator;
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
-		private GameObject _mainCamera;
+		private Camera _mainCamera;
 
 		private const float _threshold = 0.01f;
 
@@ -113,7 +119,7 @@ namespace StarterAssets
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
-				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 			}
 		}
 
@@ -138,6 +144,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Aiming();
 		}
 
 		private void LateUpdate()
@@ -187,6 +194,48 @@ namespace StarterAssets
 			CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
 		}
 
+		private void Aiming()
+		{
+			// Detect rmb 
+			// Change maincamera to aimcamera
+
+			if (_input.aiming) 
+			{
+				// Transform.forward zetten naar de juiste positie waar we heen kijken
+				// Vindt uit waar de camera heenkijkt
+				// Overschrijf camera.y.positie met eigen Y positie 
+				// camerapositie - eigen positie.normalized
+				// transform.forward = bovenstaande berekening
+				var screenHeight = Screen.height;
+				var screenWidth = Screen.width;
+				var centerOfScreen = new Vector2(screenWidth / 2.0f, screenHeight / 2.0f);
+
+				// 1 - 10 
+				// VVVVVV
+				// 0 - 1 
+				
+				var camRay = _mainCamera.ScreenPointToRay(centerOfScreen);
+
+				var camPos = camRay.GetPoint(15);
+				
+				// disable this if you want to be able to look up into the Y axis.
+				// REMINDER: Your whole body moves with it.
+				camPos.y = transform.position.y;
+
+				var lookPosition = (camPos - transform.position).normalized;
+
+				transform.forward = Vector3.Lerp(transform.forward, lookPosition, Time.deltaTime * 20.0f);
+
+				VirtualMainCamera.enabled = false;
+				VirtualAimCamera.enabled = true;
+			}
+			else
+			{
+				VirtualMainCamera.enabled = true;
+				VirtualAimCamera.enabled = false;
+			}
+		}
+
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
@@ -213,7 +262,6 @@ namespace StarterAssets
 				_idleTimer = 0.0f;
 			}
 			
-
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
@@ -246,8 +294,11 @@ namespace StarterAssets
 				_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
 				float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
-				// rotate to face input direction relative to camera position
-				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+				if (!_input.aiming)
+				{
+					// rotate to face input direction relative to camera position
+					transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+				}
 			}
 
 
