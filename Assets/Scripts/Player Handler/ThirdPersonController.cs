@@ -75,6 +75,9 @@ namespace StarterAssets
 		[Tooltip("The particlesystem for our jump animation")]
 		public ParticleSystem JumpParticleSystem;
 		
+		[Tooltip("The lamp which hides fake walls thus showing secret passages")]
+		public Transform LampObject;
+		
 		private string _animatorJumpKey = "JumpTrigger";
 		private bool _didJump = false;
 		private float _idleTimer = 0.0f;
@@ -218,16 +221,17 @@ namespace StarterAssets
 
 				var camPos = camRay.GetPoint(15);
 				
-				// disable this if you want to be able to look up into the Y axis.
-				// REMINDER: Your whole body moves with it.
-				camPos.y = transform.position.y;
-
+				// disable this if you want to be able to look up into the Y axis. REMINDER: Your whole body moves with it.
+				// camPos.y = transform.position.y;
+			
 				var lookPosition = (camPos - transform.position).normalized;
-
+					
 				transform.forward = Vector3.Lerp(transform.forward, lookPosition, Time.deltaTime * 20.0f);
 
 				VirtualMainCamera.enabled = false;
 				VirtualAimCamera.enabled = true;
+				
+				Debug.DrawRay(LampObject.position, lookPosition * 20f);
 			}
 			else
 			{
