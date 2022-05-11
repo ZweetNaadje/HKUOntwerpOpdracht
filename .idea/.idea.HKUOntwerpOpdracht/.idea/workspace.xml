@@ -14,7 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Respawn Logic/RespawnBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Respawn Logic/RespawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Trigger Logic/ActivationTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Unhide Logic/UnhideSecret.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TwoDCamView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://G:/My Drive/VR Minor/Procesboek + Portfolio/Portfolio/VR Unity Development/C# Learning/Brackey Tutorials/+- calculator/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -90,6 +90,9 @@
       <workItem from="1651233167234" duration="3758000" />
       <workItem from="1651314700008" duration="2937000" />
       <workItem from="1651317727218" duration="9302000" />
+      <workItem from="1651838295823" duration="7808000" />
+      <workItem from="1651930374077" duration="2766000" />
+      <workItem from="1652194118496" duration="2335000" />
     </task>
     <servers />
   </component>

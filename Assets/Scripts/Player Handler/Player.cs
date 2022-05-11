@@ -1,4 +1,5 @@
 using System;
+using Pickup_Logic;
 using Respawn_Logic;
 using StarterAssets;
 using UnityEngine;

@@ -1,3 +1,4 @@
+using Pickup_Logic;
 using UnityEngine;
 
 namespace PickUp_Logic
@@ -33,6 +34,11 @@ namespace PickUp_Logic
             if (PickupName == "spring")
             {
                 inventory.hasSpring = true;
+            }
+
+            if (PickupName == "Portal Authorization Key")
+            {
+                inventory.hasPortalAuthorization = true;
             }
         
             Destroy(this.gameObject);

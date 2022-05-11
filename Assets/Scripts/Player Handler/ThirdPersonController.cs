@@ -235,6 +235,7 @@ namespace StarterAssets
 			}
 			else
 			{
+				Debug.Log("thirdpersoncontroller else");
 				VirtualMainCamera.enabled = true;
 				VirtualAimCamera.enabled = false;
 			}

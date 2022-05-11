@@ -1,3 +1,4 @@
+using Pickup_Logic;
 using Player_Handler;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ namespace Teleport_Logic
     {
         // Holds a reference to the destination teleport pad
         [SerializeField] private TeleportPad _destination;
+        
+        // Holds a reference to the inventory to see if we may use a teleportpad
+        [SerializeField] private Inventory _inventory;
         
         // Holds the time it takes to activate the teleporter
         [SerializeField] private float _activationTime;
@@ -36,13 +40,13 @@ namespace Teleport_Logic
         // When we enter a trigger
         private void OnTriggerEnter(Collider other)
         {
-            // If we just teleported we dont want to do anything
-            if (_didTeleport)
+            // If we just teleported or if we dont have a portal authorization we dont want to do anything
+            if (_didTeleport || !_inventory.hasPortalAuthorization)
             {
                 return;
             }
             
-            // We stepped on a teleport pad we can set the teleporter active
+            // We stepped on a teleport pad, we can set the teleporter active
             _didActivate = true;
             
             // Calculate the time when we should teleport

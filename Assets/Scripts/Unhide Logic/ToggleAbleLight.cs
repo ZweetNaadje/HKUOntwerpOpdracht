@@ -1,3 +1,4 @@
+using Pickup_Logic;
 using StarterAssets;
 using UnityEngine;
 
