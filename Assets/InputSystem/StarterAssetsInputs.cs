@@ -53,7 +53,10 @@ namespace StarterAssets
 
 		public void OnAiming(InputValue value)
 		{
-			aiming = value.isPressed;
+			if (cursorInputForLook)
+			{
+				aiming = value.isPressed;
+			}
 		}
 
 		private void Update()
