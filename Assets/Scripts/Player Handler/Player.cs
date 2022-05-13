@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 using Pickup_Logic;
 using Respawn_Logic;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Player_Handler
 {
@@ -12,6 +14,24 @@ namespace Player_Handler
         [SerializeField] private Inventory _inventory;
         [SerializeField] private RespawnBehaviour _respawnBehaviour;
 
+        [SerializeField] private List<VisualEffect> _visualEffects = new List<VisualEffect>();
+
+        public void StartBoosters()
+        {
+            foreach (var visualEffect in _visualEffects)
+            {
+                visualEffect.Play();
+            }
+        }
+
+        public void StopBoosters()
+        {
+            foreach (var visualEffect in _visualEffects)
+            {
+                visualEffect.Stop();
+            }
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             var respawnPoint = other.gameObject.GetComponent<RespawnPoint>();

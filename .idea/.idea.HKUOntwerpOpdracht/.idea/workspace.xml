@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a35f1c41-8a57-412d-9994-922e2e620f39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HKUOntwerpOpdracht/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HKUOntwerpOpdracht/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/2DGameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/2DGameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Laser.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Laser.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Model/Robot.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Model/Robot.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TwoDCamView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TwoDCamView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Handler/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Handler/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Teleport Logic/TeleportPad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Teleport Logic/TeleportPad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unhide Logic/ToggleAbleLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unhide Logic/ToggleAbleLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Dissolve.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SecretWall/SecretWall material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/SecretWall/SecretWall material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/f1/d0dfcc37/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dissolver Logic/DissolveComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LimitFps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObstacleMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pickup Logic/DoorConfigurator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,6 +109,7 @@
       <workItem from="1652194118496" duration="2335000" />
       <workItem from="1652299196082" duration="1930000" />
       <workItem from="1652381877790" duration="1367000" />
+      <workItem from="1652476129370" duration="3924000" />
     </task>
     <servers />
   </component>
