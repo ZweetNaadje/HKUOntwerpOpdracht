@@ -26,16 +26,14 @@ public class TwoDCamView : MonoBehaviour
     private void ChangeToTwoDCamView()
     {
         if (EnteredTwoDCamZone == true)
-        {
-            Debug.Log("in de if");
+        {            
             TwoDCamera.enabled = true;
             _thirdPersonController.VirtualMainCamera.enabled = false;
             _thirdPersonController.VirtualAimCamera.enabled = false;
             _starterAssetsInputs.cursorInputForLook = false;
         }
         else
-        {
-            Debug.Log("in de else");
+        {            
             TwoDCamera.enabled = false;
             _starterAssetsInputs.cursorInputForLook = true;
         }
