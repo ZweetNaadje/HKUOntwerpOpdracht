@@ -1,3 +1,4 @@
+using Dissolver_Logic;
 using Pickup_Logic;
 using StarterAssets;
 using UnityEngine;
@@ -41,20 +42,22 @@ namespace Unhide_Logic
                     // als hetgeen wat we hitten de tag "SecretObject" heeft,
                     if (other.CompareTag("SecretObject"))
                     {
-                        var meshRenderer = other.GetComponent<MeshRenderer>();
+                        //var meshRenderer = other.GetComponent<MeshRenderer>();
                         var collider = other.GetComponent<Collider>();
+                        var dissolveComponent = other.GetComponent<DissolveComponent>();
                         
                         // hetgeen wat we raken moet een MeshRenderer en Collider hebben.
-                        if (meshRenderer == null || collider == null)
+                        if (collider == null || dissolveComponent == null)
                         {
                             return;
                         }
-                        
-                        // dan zetten we de MeshRenderer en Collider uit.
-                        meshRenderer.enabled = false;
-                        collider.enabled = false;
-                        
-                        Debug.Log("ik heb een secretwall geraakt");   
+
+                        // anonieme functie (zonder naam). Dissolve maar en als we klaar zijn,
+                        dissolveComponent.StartDissolve(() =>
+                        {
+                            // dan zetten we de Collider uit.
+                            collider.enabled = false;
+                        });
                     }
                 }
                     

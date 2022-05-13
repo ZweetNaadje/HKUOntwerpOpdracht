@@ -1,3 +1,4 @@
+using Dissolver_Logic;
 using Pickup_Logic;
 using Player_Handler;
 using UnityEngine;
@@ -17,13 +18,7 @@ namespace Teleport_Logic
         
         // Remembers if we just teleported in on the teleport pad
         private bool _didTeleport = false;
-        
-        // Remembers if we walked on the pad
-        private bool _didActivate = false;
-        
-        // Holds the current time + activation time so we know when to teleport
-        private float _activateTimer = 0.0f;
-        
+      
         /// <summary>
         /// Teleports the given component to its own position
         /// </summary>
@@ -46,37 +41,29 @@ namespace Teleport_Logic
                 return;
             }
             
-            // We stepped on a teleport pad, we can set the teleporter active
-            _didActivate = true;
-            
-            // Calculate the time when we should teleport
-            _activateTimer = Time.time + _activationTime;
-        }
-
-        // We stay in a trigger
-        private void OnTriggerStay(Collider other)
-        {
-            // If we stepped on a teleporter pad continue
-            if (!_didActivate)
-            {
-                return;
-            }
-            
             // Check if the gameobject has a player script
             var player = other.gameObject.GetComponent<Player>();
-        
+            var dissolveComponent = other.gameObject.GetComponent<DissolveComponent>();
+            
             // Check if we have a valid player and a valid destination
-            if (player == null || _destination == null)
+            if (player == null || _destination == null || dissolveComponent == null)
             {
                 return;
             }
-
-            // If enough time has passed we teleport the player
-            if (Time.time >= _activateTimer)
+            
+            player.StopBoosters();
+            
+            dissolveComponent.StartDissolve(() =>
             {
-                // Tell the destination teleporter to teleport the player towards him
                 _destination.Teleport(player.transform);
-            }
+                
+                player.StartBoosters();
+                
+                dissolveComponent.Reintegrate(() =>
+                {
+                    
+                });
+            });
         }
 
         // When we exit a trigger
@@ -84,8 +71,6 @@ namespace Teleport_Logic
         {
             // Reset all the flags and timers
             _didTeleport = false;
-            _didActivate = false;
-            _activateTimer = 0.0f;
         }
     }
 }
