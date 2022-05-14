@@ -10,6 +10,7 @@ namespace Unhide_Logic
         [SerializeField] private Inventory _inventory;
         [SerializeField] private StarterAssetsInputs _starterAssets;
         [SerializeField] private Light _spotlight;
+        [SerializeField] private Light _pointLight;
         [SerializeField] private Transform _lampObject;
         
         private bool _lampOn;
@@ -28,6 +29,7 @@ namespace Unhide_Logic
             }
             
             _spotlight.enabled = _lampOn;
+            _pointLight.enabled = _lampOn;
             
             // wanneer de lamp aan is,
             if (_lampOn == true)
@@ -35,7 +37,7 @@ namespace Unhide_Logic
                 RaycastHit hit;
                 
                 // schieten we een raycast,
-                if (Physics.Raycast(_lampObject.position, _lampObject.up, out hit))
+                if (Physics.Raycast(_lampObject.position, _lampObject.forward, out hit, 10f))
                 {
                     var other = hit.transform.gameObject;
                     
@@ -62,7 +64,7 @@ namespace Unhide_Logic
                 }
                     
                 //Debug.DrawRay(_lampObject.position, rayDirection.direction * 20f, Color.white, float.MaxValue);
-                Debug.DrawRay(_lampObject.position, _lampObject.transform.up * 20f, Color.red);
+                Debug.DrawRay(_lampObject.position, _lampObject.transform.forward * 20f, Color.red);
             }
         }
         
