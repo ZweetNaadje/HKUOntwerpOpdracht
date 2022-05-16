@@ -1,3 +1,4 @@
+using System;
 using Trigger_Logic;
 using UnityEngine;
 
@@ -5,24 +6,41 @@ namespace Pickup_Logic
 {
     public class DoorConfigurator : MonoBehaviour
     {
-        [SerializeField] private ActivationTrigger _trigger;
+        [SerializeField] private ActivationTrigger _triggerDoorOne;
+        [SerializeField] private ActivationTrigger _triggerDoorTwo;
+        [SerializeField] private ActivationTrigger _triggerDoorThree;    
         [SerializeField] private Inventory _inventory;
-    
         
-        // Update is called once per frame
-        void Update()
+        private void OnTriggerEnter(Collider other)
         {
-            // same as below
-            /*if (_inventory.key && _inventory.key1 && _inventory.key2)
-            {
-                _trigger.CanActivate = true;
-            }
-            else
-            {
-                _trigger.CanActivate = false;
-            }*/
+            // Does other have an inventory?  
+            // If yes, does the inventory have key, key1 and key2?
+            // if yes rotate the door
+
+            var inventory = other.gameObject.GetComponent<Inventory>();
             
-            _trigger.CanActivate = _inventory.key && _inventory.key1 && _inventory.key2;
+            if (inventory == null)
+            {
+                return;
+            }
+            
+            if (_inventory.key)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/FinalDoor", other.transform.position);
+                _triggerDoorOne.ActivateTrigger();
+            }
+            
+            if (_inventory.key1)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/FinalDoor", other.transform.position);
+                _triggerDoorTwo.ActivateTrigger();
+            }
+            
+            if (_inventory.key2)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/FinalDoor", other.transform.position);
+                _triggerDoorThree.ActivateTrigger();
+            }
         }
     }
 }

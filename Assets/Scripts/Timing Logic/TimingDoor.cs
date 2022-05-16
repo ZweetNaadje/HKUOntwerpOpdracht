@@ -30,6 +30,8 @@ namespace Timing_Logic
                 return;
             }
             
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PressurePlates", other.transform.position);
+            
             _trigger.ActivateTrigger();
         }
 
