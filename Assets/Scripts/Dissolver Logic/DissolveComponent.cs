@@ -15,6 +15,7 @@ namespace Dissolver_Logic
         private bool _didReintegrate = false;
 
         public bool UseSharedMaterial = false;
+        public bool IsHit;
 
         private void DissolveAnimation()
         {
@@ -76,12 +77,14 @@ namespace Dissolver_Logic
 
         public void StartDissolve(Action onComplete)
         {
+            IsHit = true;
             _onComplete = onComplete;
             _didDissolve = true;
         }
 
         public void Reintegrate(Action onComplete)
         {
+            IsHit = false;
             _onCompleteReintegrate = onComplete;
             _didReintegrate = true;
         }

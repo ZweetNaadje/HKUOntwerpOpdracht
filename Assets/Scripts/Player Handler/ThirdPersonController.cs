@@ -1,4 +1,5 @@
 using Cinemachine;
+using Pickup_Logic;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -81,6 +82,8 @@ namespace StarterAssets
 		private string _animatorJumpKey = "JumpTrigger";
 		private bool _didJump = false;
 		private float _idleTimer = 0.0f;
+
+		[SerializeField] private Inventory _inventory;
 		
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -235,7 +238,6 @@ namespace StarterAssets
 			}
 			else
 			{
-				Debug.Log("thirdpersoncontroller else");
 				VirtualMainCamera.enabled = true;
 				VirtualAimCamera.enabled = false;
 			}
@@ -341,7 +343,7 @@ namespace StarterAssets
 				}
 
 				// Jump 
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f && _inventory.hasSpring)
 				{
 					if (!_didJump)
 					{

@@ -995,6 +995,7 @@ MonoBehaviour:
   AnimationTriggerTime: 5
   JumpParticleSystem: {fileID: 4318048579945409417}
   LampObject: {fileID: 0}
+  _inventory: {fileID: 0}
 --- !u!114 &2947900460072808266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,6 +1162,8 @@ MonoBehaviour:
   hasSpring: 0
   hasPortalAuthorization: 0
   hasLamp: 1
+  _headband: {fileID: 0}
+  _lamp: {fileID: 0}
 --- !u!114 &549712676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1179,7 @@ MonoBehaviour:
   _inventory: {fileID: 1904713218}
   _starterAssets: {fileID: 2947900460072808266}
   _spotlight: {fileID: 0}
+  _pointLight: {fileID: 0}
   _lampObject: {fileID: 0}
 --- !u!1 &1534430641526041061
 GameObject:
@@ -3008,7 +3012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5882666036845383227}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.475928, z: -0.021873027}
+  m_LocalPosition: {x: 0, y: 1.475928, z: -0.021873027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4743,8 +4747,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9025796888026807429}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.5572953, z: 0.4310806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5572948, z: 0.43107605}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

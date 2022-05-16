@@ -54,6 +54,11 @@ namespace Unhide_Logic
                             return;
                         }
 
+                        if (!dissolveComponent.IsHit)
+                        {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SecretDoor", other.transform.position);
+                        }
+                        
                         // anonieme functie (zonder naam). Dissolve maar en als we klaar zijn,
                         dissolveComponent.StartDissolve(() =>
                         {

@@ -51,6 +51,8 @@ namespace Teleport_Logic
                 return;
             }
             
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Teleport", player.transform.position);
+            
             player.StopBoosters();
             
             dissolveComponent.StartDissolve(() =>
