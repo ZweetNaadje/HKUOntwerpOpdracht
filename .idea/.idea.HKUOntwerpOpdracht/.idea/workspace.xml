@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a35f1c41-8a57-412d-9994-922e2e620f39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HKUOntwerpOpdracht/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HKUOntwerpOpdracht/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Door Animations/PuzzleDoorOpen.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Door Animations/PuzzleDoorOpen.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameLevel/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dissolver Logic/DissolveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dissolver Logic/DissolveComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/DoorConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/DoorConfigurator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pickup Logic/Pickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Handler/ThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Handler/ThirdPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn Logic/RespawnBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn Logic/RespawnBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Teleport Logic/TeleportPad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Teleport Logic/TeleportPad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timing Logic/TimingDoor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Timing Logic/TimingDoor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Unhide Logic/ToggleAbleLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Unhide Logic/ToggleAbleLight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_AlbedoTransparency.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_AlbedoTransparency.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_Emission.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_Emission.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_MetallicSmoothness.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_MetallicSmoothness.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_Normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/MainDoor/MainDoor_low_lambert1_Normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMOD/Build/Desktop/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD/Build/Desktop/Master.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMOD/Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMOD/Build/Desktop/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMOD/Metadata/Event/{a1b09159-0ff1-4cc0-bf67-3b2dc530cb40}.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
-    </list>
+    <list default="true" id="a35f1c41-8a57-412d-9994-922e2e620f39" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,6 +104,7 @@
       <workItem from="1652559662305" duration="2688000" />
       <workItem from="1652563092212" duration="3851000" />
       <workItem from="1652697829906" duration="13387000" />
+      <workItem from="1653042998633" duration="593000" />
     </task>
     <servers />
   </component>

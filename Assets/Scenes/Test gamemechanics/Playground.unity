@@ -4413,6 +4413,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1904713218, guid: 350f163fc75abc846aaa090503efd56b, type: 3}
+      propertyPath: hasLamp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904713218, guid: 350f163fc75abc846aaa090503efd56b, type: 3}
+      propertyPath: hasSpring
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904713218, guid: 350f163fc75abc846aaa090503efd56b, type: 3}
       propertyPath: hasPortalAuthorization
       value: 1
       objectReference: {fileID: 0}
